@@ -1,0 +1,13 @@
+<div ng-show="infoCtrl.submitted">
+    <h1>Your registerd information.</h1>
+    <p>First name: {{infoCtrl.user.first_name}}</p>
+    <p>Last name: {{infoCtrl.user.last_name}}</p>
+    <p>Email: {{infoCtrl.user.email_address}}</p>
+    <p>Phone: {{infoCtrl.user.phone_number}}</p>
+    <!--  <img class="img-responsive" ng-src="{{infoCtrl.apiPath}}/images/{{infoCtrl.user.favoriteDish}}.jpg" alt="{{infoCtrl.user.favoriteDishDetails.name}}" /> -->
+
+</div>
+
+<div ng-hide="infoCtrl.submitted">
+    <h1>Not Signed Up Yet <a ui-sref="public.sign-up">Signup now!</a></h1>
+</div>
