@@ -10,6 +10,7 @@ function InfoController(UserDataService) {
 
   ctrl.submitted=UserDataService.submitted;
   ctrl.user=UserDataService.user;
+  ctrl.item=UserDataService.data;
 }
 
 })();

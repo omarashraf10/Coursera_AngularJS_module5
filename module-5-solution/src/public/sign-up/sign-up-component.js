@@ -14,13 +14,20 @@ function RegController(UserDataService) {
     first_name : "",
     last_name : "",
     email_address : "",
-    phone_number : ""
-
+    phone_number : "",
+    favorite_dish :""
   };
-  $ctrl.submitted  =false;
+  $ctrl.submitted  = false;
+  $ctrl.error = false;
   $ctrl.submit= function(){
   //  console.log('submitted', $ctrl.submitted );
-    $ctrl.submitted = UserDataService.submit($ctrl.user);
+    UserDataService.submit($ctrl.user).then(function(result){
+      $ctrl.submitted  = true;
+      $ctrl.error = false;
+    },function(error){
+      $ctrl.error = true;
+      $ctrl.submitted  = false;
+    })
   //  console.log('submitted', $ctrl.submitted );
   };
 

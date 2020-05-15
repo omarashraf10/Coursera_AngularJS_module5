@@ -4,7 +4,14 @@
     <p>Last name: {{infoCtrl.user.last_name}}</p>
     <p>Email: {{infoCtrl.user.email_address}}</p>
     <p>Phone: {{infoCtrl.user.phone_number}}</p>
-    <!--  <img class="img-responsive" ng-src="{{infoCtrl.apiPath}}/images/{{infoCtrl.user.favoriteDish}}.jpg" alt="{{infoCtrl.user.favoriteDishDetails.name}}" /> -->
+    <h3>
+      Favorite Dish:
+    </h3>
+    <p>Title: {{infoCtrl.item.name}}</p>
+    <p>Description: {{infoCtrl.item.description}}</p>
+    <img class="img-responsive"
+          ng-src="https://omarsobhy-course5.herokuapp.com/images/{{infoCtrl.item.short_name}}.jpg"
+          alt="{{infoCtrl.item.shortName}}" />
 
 </div>
 

@@ -32,6 +32,14 @@
           </span>
           <br>
 
+          <input type="text" name="favorite_dish" placeholder="Pick your favourite dish"
+            ng-model="$ctrl.user.favorite_dish"
+            required>
+            <div ng-if="$ctrl.error">
+                No such menu number exists
+            </div>
+          <br>
+
         <button
           ng-disabled="regForm.$invalid"
           ng-click="$ctrl.submit()">Submit
